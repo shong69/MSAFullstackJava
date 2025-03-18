@@ -1,0 +1,23 @@
+package com.am;
+
+class Outter04{
+	static void func04() {
+		class Local01{ //접근제한자 X
+//			static int su01 = 1111;//static 선언 불가
+			public final static int su01 = 1111;//final 선언 시 가능
+			public int su02 = 2222;
+			public void func01() {}
+		}
+	}
+	
+	void func02() {
+		class Local02{}//동일
+	}
+}
+
+
+public class Ex04 {
+	public static void main(String[] args) {
+		
+	}
+}

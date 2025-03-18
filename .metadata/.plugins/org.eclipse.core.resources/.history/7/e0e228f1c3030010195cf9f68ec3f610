@@ -1,0 +1,25 @@
+package com.pm;
+
+import java.util.Scanner;
+
+public class Ex05 {
+	static class UserErr extends Exception{} //Exception 클래스를 상속받아 에러가 됨
+
+	public static int func01(int su) throws UserErr{//RuntimeException을 상속받지 않아서 강제로 던짐
+		if(!(su == 1|| su == 2|| su==5||su==10)) 
+			throw new UserErr();
+		
+		return 10/su;
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int input = sc.nextInt();
+		try {
+			int su = func01(input);
+			System.out.println(su);
+		}catch (Exception e) {
+			System.out.println("입력오류");
+		}
+		
+	}
+}

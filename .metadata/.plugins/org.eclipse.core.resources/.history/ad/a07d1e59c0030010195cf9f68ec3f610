@@ -1,0 +1,14 @@
+package com.pm;
+
+public class Ex04 {
+	public static void main(String[] args) {
+		
+		 try {
+			Class.forName("com.pm.Ex04");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
+	}
+}

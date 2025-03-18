@@ -1,0 +1,15 @@
+package com.am;
+class Lec05{
+	void func01() {
+		class local{
+			void func02() {
+				System.out.println("내부 클래스의 기능 수행");
+			}
+		}
+	}
+}
+public class Ex05 {
+	public static void main(String[] args) {
+		//익명 클래스
+	}
+}

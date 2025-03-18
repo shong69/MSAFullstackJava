@@ -1,0 +1,25 @@
+package com.am;
+
+interface Parent{ //상속을 통해서 변수의 라이프사이클을 벗어날 수 있다.
+	abstract void func02();
+}
+class Lec05{
+	
+	static Parent func01() {
+		class Local implements Parent{ //1/ func02()를 가진 부모(interface)를 상속받아서
+			public void func02() {
+				System.out.println("내부 클래스의 기능 수행");
+			}
+		}
+//		Local local = new Local();
+//		local.func02();
+		return new Local();
+	}
+}
+public class Ex05 {
+	public static void main(String[] args) {
+		//익명 클래스
+		Parent local = Lec05.func01();
+		local.func02(); //2. 외부에서 func01과 func02 호출을 동시에 가능하게 함
+	}
+}

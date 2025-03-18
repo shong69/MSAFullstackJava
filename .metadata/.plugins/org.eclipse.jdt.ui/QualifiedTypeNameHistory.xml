@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.io.Console"/>
+<fullyQualifiedTypeName name="com.pm.Ex09"/>
+<fullyQualifiedTypeName name="com.am.Student"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="javax.print.attribute.HashAttributeSet"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="com.am.Ex01"/>
+<fullyQualifiedTypeName name="com.am.Ex05"/>
+<fullyQualifiedTypeName name="com.am.Car"/>
+<fullyQualifiedTypeName name="com.am.Carriage"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="com.am.Cycle"/>
+<fullyQualifiedTypeName name="com.am.Ex10"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Constructor"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Field"/>
+<fullyQualifiedTypeName name="com.pm.Audio"/>
+<fullyQualifiedTypeName name="com.am.Machine"/>
+<fullyQualifiedTypeName name="com.am.child.Lec02"/>
+<fullyQualifiedTypeName name="java.lang.Cloneable"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.PrintStream"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.Character"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+<fullyQualifiedTypeName name="com.pm.Student"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="com.am.Outter02"/>
+<fullyQualifiedTypeName name="com.am.Outter02.Inner02"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="Ex06.Ball"/>
+</qualifiedTypeNameHistroy>

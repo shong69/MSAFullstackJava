@@ -1,0 +1,22 @@
+package com.am;
+class Outter02{
+	static int su1=1111;
+	int su2 =2222;
+	
+	static class Inner02{
+		static int su3 = 3333;
+	}
+	
+	static void func01() {
+		System.out.println("outter static method");
+	}
+	
+	void func02() {
+		System.out.println("outter non-static method");
+	}
+}
+public class Ex02 {
+	public static void main(String[] args) {
+		
+	}
+}

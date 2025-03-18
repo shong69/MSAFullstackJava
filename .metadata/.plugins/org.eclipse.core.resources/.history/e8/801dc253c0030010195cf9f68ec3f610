@@ -1,0 +1,8 @@
+package com.pm;
+
+public class Ex04 {
+	public static void main(String[] args) {
+		Ex04 me = Class.forName("com.pm.Ex04");
+				
+	}
+}

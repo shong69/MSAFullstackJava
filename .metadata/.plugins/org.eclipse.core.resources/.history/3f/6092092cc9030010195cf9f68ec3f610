@@ -1,0 +1,26 @@
+
+public class Ex06 {
+	public static void main(String[] args) {
+		//로또 번호 생성기(ver 0.1.0)
+		//1~45번 사이의 수 6개(중복 X)
+		//1.6칸 빈 배열 만들어서 뽑힌 수 넣고 중복 체크하기
+		//2.45칸 숫자 배열 만들어서 이 중 6개 뽑기(뽑은거 0으로 바꾸고)
+		//3.Ball 객체에서 중복 없는 숫자 뽑는 메서드 만들기
+		
+		
+		
+	}
+	public class Ball{
+		int num;
+		public Ball() {
+			int temp = (int)(Math.random()*45)+1;
+			if(this.check(temp)) {
+				this.num = temp;
+			}
+		}
+		private boolean check(int temp) {
+			
+			return false;
+		}
+	}
+}

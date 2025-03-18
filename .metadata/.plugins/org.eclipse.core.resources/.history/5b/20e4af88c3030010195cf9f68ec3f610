@@ -1,0 +1,22 @@
+package com.pm;
+
+import java.util.Scanner;
+
+public class Ex05 {
+	public static int func01(int su) {
+		if(!(su == 1|| su == 2|| su==5||su==10)) return 0;
+		
+		return 10/su;
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int input = sc.nextInt();
+		int su = func01(input);
+		if(su ==0) {
+			System.out.println("입력 오류");
+		}else {
+			System.out.println(su);
+
+		}
+	}
+}

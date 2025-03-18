@@ -1,0 +1,12 @@
+package com.pm;
+
+public class Ex03 {
+	public static void main(String[] args) {
+		int[] arr1= {-2,-1,0,1,2};
+		int su = 0/arr1[2];
+		
+		Object obj = new Ex04();
+		Ex04 me = (Ex04)obj;
+				
+	}
+}

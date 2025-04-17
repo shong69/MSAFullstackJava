@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!-- 디렉티브(Directive) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>jsp의 문법 구조</h1>
+<%!
+//선언부
+%>
+<p><%
+//스크립 트릿
+System.out.println("java code");
+%></p>
+</body>
+</html>

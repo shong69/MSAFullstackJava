@@ -1,0 +1,22 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "ubuntu/focal64"
+  config.vm.box_version = "20240821.0.1"
+  config.vm.network "forwarded_port", guest: 8080, host: 7080
+  config.vm.network "forwarded_port", guest: 3306, host: 33306
+
+  config.vm.provision "shell", inline: <<-SHELL
+  apt-get update -y
+  apt-get install openjdk-8-jdk-headless-y 
+  echo export JAVA_HOME = /user/lib/jvm/java-8-openjdk-amd64 >> /etc/profile
+  source /etc/profile
+  apt-get install -y tomcat9
+  SHELL
+end

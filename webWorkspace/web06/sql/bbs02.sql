@@ -1,0 +1,8 @@
+CREATE TABLE `bbs05` (
+	`num` INT NOT NULL AUTO_INCREMENT,
+	`sub` VARCHAR(50) NULL DEFAULT NULL,
+	`content` TEXT NULL,
+	`cnt` INT NULL,
+	`nalja` TIMESTAMP NULL DEFAULT (now()),
+	PRIMARY KEY (`num`)
+)

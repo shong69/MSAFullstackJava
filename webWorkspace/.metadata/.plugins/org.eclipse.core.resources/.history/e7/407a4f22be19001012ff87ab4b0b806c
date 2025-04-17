@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table width="800" border="1">
+		<tr>
+			<td colspan="6">로고 이미지</td>
+		</tr>
+		<tr>
+			<td width="133"></td>
+			<td width="133">menu1</td>
+			<td width="133">menu2</td>
+			<td width="133">menu3</td>
+			<td width="133">menu4</td>
+			<td width="133">menu5</td>
+		</tr>
+		<tr>
+			<td colspan="6">내용</td>
+		</tr>
+		<tr>
+			<td colspan="6">푸터</td>
+		</tr>
+	</table>
+</body>
+</html>

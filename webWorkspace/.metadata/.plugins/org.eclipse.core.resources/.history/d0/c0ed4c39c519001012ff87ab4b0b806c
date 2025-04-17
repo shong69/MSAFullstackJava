@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table width="800" align="center">
+		<tr>
+			<td colspan="6">
+				<img src="imgs/img.png">
+			</td>
+		</tr>
+		<tr>
+			<td width="100" bgcolor="gray"></td>
+			<td width="150" bgcolor="gray" align="center"><a href="index.jsp">HOME</a></td>
+			<td width="150" bgcolor="gray" align="center"><a href="intro.jsp">INTRO</a></td>
+			<td width="150" bgcolor="gray" align="center"><a href="list.jsp">BBS</a></td>
+			<td width="150" bgcolor="gray" align="center"><a href="guest.jsp">GUEST</a></td>
+			<td width="100" bgcolor="gray" ></td>
+		</tr>
+		<tr>
+			<td colspan="6" height="400" valign ="top">
+				<h1>글쓴이</h1>
+				
+				<form action="">
+				ê¸ì´ì´<input type="text" name="writer"></br>
+				<textarea rows ="5" cols="20" name="content"></textarea>
+				<input type="submit" value="ìì±">
+				</form>
+				<table border="1" width="100%">
+					<tr>
+						<td width="80">글쓴이</td>
+						<td>내용</td>
+						<td width="50">삭제</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="6" align="center">
+				<hr>
+				ÃÂ© 2025 GitHub, Inc.Footer 
+		</tr>
+	</table>
+</body>
+</html>

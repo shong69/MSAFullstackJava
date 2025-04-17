@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>내장 객체</h1>
+
+<%
+String addr = request.getRemoteAddr();
+out.print("<p>"+addr+"</p>");
+
+int port = request.getRemotePort();
+out.print("<p>port:"+port+"</p>");
+
+
+%>
+</body>
+</html>

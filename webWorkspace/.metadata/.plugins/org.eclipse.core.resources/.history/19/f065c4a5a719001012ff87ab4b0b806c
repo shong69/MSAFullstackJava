@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>내장 객체</h1>
+
+<%
+String addr = request.getRemoteAddr();
+out.print("<p>clinet ip"+addr+"</p>");
+
+
+int port = request.getRemotePort();
+out.print("<p>client port:"+port+"</p>");
+
+String addr2 = request.getServerName();
+out.print("<p>server ip"+addr+"</p>");
+
+
+int port2 = request.getServerPort();
+out.print("<p>server port:"+port+"</p>");
+
+
+
+%>
+</body>
+</html>

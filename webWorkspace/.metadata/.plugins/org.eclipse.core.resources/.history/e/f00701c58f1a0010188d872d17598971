@@ -1,9 +1,0 @@
-CREATE TABLE `bbs02` (
-	`num` INT NOT NULL,
-	`id` VARCHAR(16) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
-	`nalja` DATETIME NULL DEFAULT NULL,
-	`subject` VARCHAR(30) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
-	`content` TEXT NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci'
-)
-COLLATE='utf8mb4_0900_ai_ci'
-;

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            //on이랑 click이랑 같은 기능을 하고 있음
+            $('button').click(function(){
+                $('<button>add</button>').click(function(){
+                    console.log('event');
+                }).insertAfter('button');
+            });
+            $('button').on('click',function(){
+                $('button').after($('<button>add</button>'));
+            });
+
+            //document에 on 매개변수 세개를(event, selector, handler) 통해서 버튼 추가 기능을 구현할 수 있음->event binding
+            //event의 대상은 document이고, click이벤트가 button에서 일어나면 callback이 일어난다.
+            $(document).on('click','button',function(){
+                $('h1+button').after($('<button>add</button>'));
+            });
+
+            $(document).on('click','a',function(){
+                console.log('취소'); //return false해도 취소 출력 됨
+                return false; //링크 이동을 막고, 상위 전파를 막는다. 
+            });
+            //.one() : 단 한번만 이벤트를 발생시키도록 한다.
+            $(document).one('click','a',function(){
+                console.log('이벤트 발생');
+            });
+
+        })
+    </script>
+</head>
+<body>
+    <h1>event bind</h1>
+    <button>btn</button>
+    <a href="ex01.html"></a>
+</body>
+</html>

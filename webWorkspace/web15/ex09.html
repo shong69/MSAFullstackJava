@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style rel="stylesheet" type="text/css">
+        div{
+            width : 50px;
+            height: 50px;
+            
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            //jquery animation : css의 애니메이션으로 움직인다.
+            $('div').animate({'margin-left':'300px','background-color':'aqua'}); //document ready 시점에 margin-left로 200px 이동함
+                                                    //색 관련 설정은 적용되지 않는다!!
+            $('div').animate({'margin-top':'300px'}); //left 이동 후 top 이동함 -> 한줄씩 이동하고 있음
+
+            $('div').finish(); //애니메이션 과정을 생략하고 바로 결론으로 간다.
+
+            $('button').click(function(){
+                // $('div').stop(); //하던 일을 멈추게 된다다
+
+                // div 요소 안에 현재 fx 큐에 몇 개의 작업이 걸려 있는지 숫자를 보여줌
+                //queue("fx")는 그 div에 걸린 애니메이션 큐를 가져오고,
+                //.length는 그 큐 안에 몇 개가 쌓여 있는지 알려줘.
+                $('div').html($('div').queue("fx").length()); //할 일이 몇 개 남았는지 html 내에 보여준다.
+
+                $('div').clearQueue().stop(); //큐를 비우게 된다 -> 할 일들이 사라지게 됨.(but 현재 진행중이던 일은 마친다. stop처리하면 멈춰짐)
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>box</div>
+</body>
+</html>

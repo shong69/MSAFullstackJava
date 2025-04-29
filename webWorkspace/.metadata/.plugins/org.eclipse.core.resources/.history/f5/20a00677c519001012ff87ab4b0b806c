@@ -1,5 +1,0 @@
-create table guest01(
-	idx number primary key,
-	writer varchar2(15) not null,
-	content varchar2(2000)
-);

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            // $('a').click(function(){
+            //     console.log('취소');
+            //     return false;
+            // }) -> on 사용 X. dom 레벨 3임 -> 제이쿼리는 3레벨이 기본임+return false까지 가능하다다
+
+            $('a').on('click',function(){
+                console.log('취소');
+                return false;
+            }); //return false하면서 기본 기능 취소가 가능하다. 
+            //--------------------------
+            var callback=function(){
+                console.log('클릭');''
+            };
+            $('button').first().on('click',callback);
+            $('button').eq(1).on('click',function(){//button의 클릭해도 멈추도록록 저도 그런데이분도 그렇네 흠..? 
+                $('button').first().off('click',callback);
+            });
+            $('button').eq(2).on('click',function(){//button의 클릭 재개하도록
+                $('button').first().on('click',callback);
+            });
+            
+            // $('button').bind('click',function(){
+            //     console.log('클릭');
+            // });
+            // $('button').delegate('click',function(){
+            //     console.log('클릭');
+            // });
+        });
+    
+    </script>
+</head>
+<body>
+    <h1>event</h1>
+    <button>btn</button>
+    <button>off</button>
+    <button>on</button>
+    <a></a>
+</body>
+</html>

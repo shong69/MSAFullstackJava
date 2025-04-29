@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            //hide의 옵션과 그 값들의 상관관계 
+            //첫번째를 누르면 사라지도록
+            $('button').eq(0).click(function(){
+                $('#target').hide({
+                    'duration': 'slow', ///fast, slow등 부여 가능
+                    'easing' : 'easyoutbounce', //일정하게 동작하도록 -linear, swing 부여 가능 
+                    'complemte' : function(){console.log('start..');},
+                    'step' : function(a,b){console.log('step',a,b);},
+                    'progress': function(a,b,c){
+                        console.log(a,b,c);
+                    }
+                    //b : 0~>1
+                    //c: 진행한 시간. 얼마만큼 남아있는지 알 수 있다.
+                    
+                })
+            })
+            .next()
+            .click(function(){//두번째를 누르면 서서히 나타나도록
+                $('#target').show(3000);
+            })
+            .next()
+            .click(function(){
+                $('#target').toggle(3000); //toggole : 눌렀을 때 전환되는 역할 -> 서서히 사라진듯듯
+            })
+            .next()
+            .click(function(){
+                $('#target').slide(3000); //슬라이딩 되면서 없어짐
+                $('#target').slideDown(3000);
+                $('#target').slideToggle(3000);
+                $('#target').fadeToggle(3000); 
+                $('#target').fadeTo()
+            })
+            .next()
+            .click(function(){
+                $('#target').fadeTo(3000, 0.5); //3초동안 50%만 fadeout되면서 반정도만 희미하게 됨
+            })
+
+        });
+    </script>
+</head>
+<body>
+    <h1>animate 1</h1>
+    <button>btn1</button>
+    <button>btn2</button>
+    <button>btn3</button>
+    <button>btn4</button>
+    <button>btn5</button>
+    <div id="target">
+        <p>정당의 설립은 자유이며, 복수정당제는 보장된다. 누구든지 병역의무의 이행으로 인하여 불이익한 처우를 받지 아니한다. 대법원장은 국회의 동의를 얻어 대통령이 임명한다.</p>
+
+<p>국가는 법률이 정하는 바에 의하여 재외국민을 보호할 의무를 진다. 국무총리는 국회의 동의를 얻어 대통령이 임명한다. 감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으로 하며, 1차에 한하여 중임할 수 있다.</p>
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        //1) window.onload
+        window.onload = function(){
+            console.log('window load...');
+        };
+
+        //2) $().load : window.onload보다 느리다. 쓰지 않는 것을 추천
+        $(window).load(function(){
+            console.log('jq load');
+        });
+
+        //3) $(function(){})
+        $(function(){
+            console.log('jquery run...',document.querySelector('h1')); //윈도우 로딩 전인데도 h1 태그를 인식하고 있음 -> onload는 dom가져오고 렌더링까지 완료될 때여서(dom은 미리 로딩된다.)
+            // $('li').map(function(idx, ele){
+            //     $(ele).css('color','red')
+            //     if(idx%2==0) return ele;
+            // }).css('background-color','blue');
+        });
+
+        //4) $(document).ready(function(){})
+        $(document).ready(function(){ //3번과 같은 뜻이지만 이해하기 쉽도록 해당 코드 사용하는 것이 좋다
+            console.log('document ready...');
+        })
+        // dom뜸 -> document ready 상태 -> window load 됨
+
+        //-----------------------------------------------------------------
+        // resize -> 화면 사이즈 바뀜뀜
+        $(window).resize(function(){
+            // console.log($(window).width(), $(window).height());
+        });
+        // scroll
+        $(window).scroll(function(e){
+            // console.log(e);
+            // console.log($(window).scrollTop());
+            //특정 길이만큼 내리면 그 다음부터는 <li>add</li>가 나타남
+            if($(document).height()-180<$(window).scrollTop()){
+                $('ul').append('<li>add</li>');
+            }
+        });
+        //mouseEvent - mouseenter, mouseleave, click
+        $(document).ready(function(){
+            $('button').mouseenter(function(){
+                console.log('마우스 위로');
+            });
+            $('button').mouseleave(function(){
+                console.log('마우스 out');
+            });
+            $('button').mouseover(function(){ //enter와 동일한 상황
+                console.log('마우스 over');
+            });
+            $('button').mouseout(function(){ //leave와 동일한 상황황
+                console.log('마우스 out');
+            });
+            $('button').mouseup(function(){
+                console.log('버튼 위로');
+            });
+            $('button').mousedown(function(){
+                console.log('버튼 아래로');
+            });
+            $('button').click(function(){
+                console.log('버튼 클릭');
+            });
+            $('button').dblclick(function(){
+                console.log('더블 클릭');
+            });
+        });
+        //
+
+    </script>
+</head>
+<body>
+    <h1>jquery</h1>
+    <p><a href="ex01.html">ex01.html</a></p>
+    <button>btn</button>
+    <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+        <li>item6</li>
+    </ul>
+</body>
+</html>

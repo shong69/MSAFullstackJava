@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('form').submit(function(){
+                func01();
+                return false; 
+            });
+        });
+        function func01(num){
+            $.ajax({
+                url:'stu.json',
+                // type:'post', //method의 원형
+                method:'post',
+                data:$('form').serialize(), //parameter 지정 -> serialize() 중에서 받은 값을 넘겨준다.
+                dataType:'json', //json으로 데이터 받아오도록
+                success:function(data, status, xhr){
+                    console.log(data, status, xhr);
+                    data.stus.forEach(function(ele){
+                        $('<tr/>')
+                        .append($('<td/>').html(ele.num))
+                        .append($('<td/>').html(ele.name))
+                        .append($('<td/>').html(ele.kor))
+                        .append($('<td/>').html(ele.eng))
+                        .append($('<td/>').html(ele.math))
+                        .appendTo('tbody');
+                    });
+                },
+                error:function(xhr, msg, err){
+                    console.log(xhr, msg, err);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>xhr - xml</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>num</th>
+                <th>name</th>
+                <th>kor</th>
+                <th>eng</th>
+                <th>math</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <form>
+        <input type="text" name="num"/> 
+        <button>전송</button>
+    </form>
+</body>
+</html>

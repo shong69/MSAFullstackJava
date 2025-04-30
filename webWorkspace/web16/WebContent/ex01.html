@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style rel="stylesheet" type="text/css">
+        .bxslider{}
+        .bxslider img{
+            width: 100%;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript">
+        var bx;
+        $(function(){
+            //.bxSlider() : bxSlider 실행 메서드
+            //내부 파라미터로 하나의 객체 안에 옵션 값들을 줄 수 있다.
+           bx = $('.bxslider').bxSlider({
+                'minSlides' :2,
+                'maxSlides' : 3,
+                'slideWidth' : 200, //슬라이드의 넓이 설정
+                //minSlide, maxSlide, slideWidth를 한번에 모두 설정해야 먹힌다.
+                'moveSlides' : 1, //슬라이드 변경 갯수
+                'auto' : true, //자동으로 슬라이드 변경
+                'pause' : 2000, //2초마다 멈춤
+                'nextText' : '다음',
+                'prevText' : '이전',
+                'nextSelector' : $('h2+p>span').eq(1),
+                'prevSelector' : $('h2+p>span').eq(0),
+                // 'onSliderLoad' : function(){
+                //     console.log('load...');
+                // }
+                // 'onSlideNext' : function(a,b,c){
+                //     console.log('클릭한 다음', a.find('img').attr('src'),b,c);
+                //     //a,b,c는
+                //     // $slideElement: -> a
+                //     // jQuery element of the destination element 요소소
+                //     // oldIndex: -> b
+                //     // element index of the previous slide (before the transition)
+                //     // newIndex: -> c
+                //     // element index of the destination slide (after the transition)
+                // },
+                // 'onSlideAfter' : function(){
+                //     console.log('after');
+                //     //다음버튼 클릭-> onSlideNext -> slideAfter 실행된다
+                // },
+                // 'onSlideBefore' : function(){
+                //     console.log('before');
+                //     //다음 버튼 클릭 -> slideBefore -> onSlideNext -> slideAfter 실행됨
+                // }
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="bxslider">
+        <div><img src="imgs/b1.avif"></div>
+        <div><img src="imgs/b2.avif"></div>
+        <div><img src="imgs/b3.avif"></div>
+        <div><img src="imgs/b4.avif"></div>
+        <div><img src="imgs/b5.avif"></div>
+        <div><img src="imgs/b6.avif"></div>
+      </div>
+      <h2 id="p"></h2>
+      <p>
+        <span><</span>
+        <span> > </span>
+      </p>
+</body>
+</html>

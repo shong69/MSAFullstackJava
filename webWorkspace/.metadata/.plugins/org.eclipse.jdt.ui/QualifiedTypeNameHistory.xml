@@ -12,7 +12,6 @@
 <fullyQualifiedTypeName name="com.mysql.cj.jdbc.Driver"/>
 <fullyQualifiedTypeName name="com.sun.istack.internal.logging.Logger"/>
 <fullyQualifiedTypeName name="java.util.logging.Level"/>
-<fullyQualifiedTypeName name="java.util.logging.Logger"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.sql.Statement"/>
@@ -23,6 +22,13 @@
 <fullyQualifiedTypeName name="com.mvc.model.BbsDto"/>
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="com.mvc.model.BbsDao"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="javax.activation.DataSource"/>
+<fullyQualifiedTypeName name="javax.sql.DataSource"/>
+<fullyQualifiedTypeName name="com.mysql.cj.jdbc.MysqlDataSource"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+<fullyQualifiedTypeName name="com.web20.model.UserDao"/>
 </qualifiedTypeNameHistroy>

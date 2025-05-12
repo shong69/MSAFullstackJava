@@ -6,6 +6,7 @@
 		<item value="Apache Tomcat v8.5"/>
 	</list>
 	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="D:\MSAFullstackJava\webWorkspace\web23\target\web23.war"/>
 		<item value="D:\MSAFullstackJava\webWorkspace\web18\dest\web18.war"/>
 		<item value="D:\MSAFullstackJava\webWorkspace\web18\dest.war"/>
 		<item value="D:\MSAFullstackJava\webWorkspace\web17\dest.war"/>

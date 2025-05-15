@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+<!-- AOP -->
+	<bean id="beforeAdvice" class="com.my.aop.BeforePrint"></bean>
+	<bean id="afterAdvice" class="com.my.aop.AfterPrint"></bean>
+	<bean id="throwsAdvice" class="com.my.adp.ErrPring"></bean>
+	<bean id="aroundAdvice" class="com.my.adp.AroundPrint"></bean>
+	
+<!--1) 직접 프록시 모델을 생성하는 방법
+	- module10을 닮은 Bean을 생성함 
+	<bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="module10"></property>
+		<property name="interceptorNames">
+			<array>
+				<value>beforeAdvice</value>
+			</array>
+		</property>
+	</bean> -->
+	
+<!--2) module을 beanName으로 만들어줘서 사용하는 방법 -->
+
+	<!-- 특정 메소드에서만 aop가 작동할 수 있도록 선택해주는 방법 -메서드 이름으로 지정하기
+	<bean id="pointcut" class="org.springframework.aop.support.NameMatchMethodPointcut">
+		<property name="mkappedNames">
+			<array>
+				<value>func02</value>
+				<value>func03</value>
+			</array>
+		</property>
+	</bean> -->
+	<!-- 특정 메서드 이름을 가진 경우에만 aop가 작동할 수 있도록 하는 방법 -패턴으로 지정하기 -->
+	<bean id="pointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut">
+		<property name="pattern" value=".*func.*"></property>	<!-- 메서드 첫 시작 단어만 지정 가능 -->
+	</bean>
+	
+	<bean class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<property name="pointcut" ref="pointcut"></property>
+		<property name="advice" ref="beforeAdvice"></property>
+	</bean>
+	<bean id="beanFactoryAware" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="beanNames" value="myModule2"/>
+		<property name="interceptorNames">
+			<array>
+				<value>afterAdvice</value>
+				<value>beforeAdvice</value>
+				<value>throwsAdvice</value>
+				<value>aroundAdvice</value>
+				<value>pointcutAdvice</value>
+			</array>
+		</property>
+	</bean>
+	<bean id="module10" class="com.my.module.Module10"></bean>
+	<bean class="com.my.service.Service02">
+		<property name="module" ref="myModule2"></property><!-- ref="proxy"module10을 닮은 bean을 module로 의존성 주입:AOP -->
+	</bean>
+
+</beans>

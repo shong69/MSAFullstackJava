@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=web16/D:\/tool\/apache-tomcat-8.5.100\/lib\/servlet-api.jar&lt;javax.servlet(Servlet.class[Servlet" modifiers="1537" timestamp="1710856482000"/>
-<typeInfo handle="=web16/D:\/tool\/apache-tomcat-8.5.100\/lib\/servlet-api.jar&lt;javax.servlet(GenericServlet.class[GenericServlet" modifiers="1057" timestamp="1710856482000"/>
-<typeInfo handle="=web16/D:\/tool\/apache-tomcat-8.5.100\/lib\/servlet-api.jar&lt;javax.servlet.http(HttpServlet.class[HttpServlet" modifiers="1057" timestamp="1710856482000"/>
-<typeInfo handle="=web23/src\/main\/java&lt;com.myframework{Controller.java[Controller" modifiers="513" timestamp="1747017984263"/>
+<typeInfo handle="=sts02/src\/main\/java&lt;com.my.module{MyModule.java[MyModule" modifiers="513" timestamp="1747271843786"/>
+<typeInfo handle="=sts02/C:\/Users\/user\/.m2\/repository\/org\/springframework\/spring-aop\/3.1.1.RELEASE\/spring-aop-3.1.1.RELEASE.jar&lt;org.springframework.aop(ThrowsAdvice.class[ThrowsAdvice" modifiers="1537" timestamp="1747189514240"/>
+<typeInfo handle="=sts02/C:\/Users\/user\/.m2\/repository\/aopalliance\/aopalliance\/1.0\/aopalliance-1.0.jar&lt;org.aopalliance.intercept(MethodInterceptor.class[MethodInterceptor" modifiers="1537" timestamp="1747040792065"/>
+<typeInfo handle="=sts02/C:\/Users\/user\/.m2\/repository\/org\/springframework\/spring-aop\/3.1.1.RELEASE\/spring-aop-3.1.1.RELEASE.jar&lt;org.springframework.aop(AfterReturningAdvice.class[AfterReturningAdvice" modifiers="1537" timestamp="1747189514240"/>
+<typeInfo handle="=sts03/C:\/Users\/user\/.m2\/repository\/org\/springframework\/spring-webmvc\/3.1.1.RELEASE\/spring-webmvc-3.1.1.RELEASE.jar&lt;org.springframework.web.servlet.mvc(SimpleFormController.class[SimpleFormController" modifiers="1048609" timestamp="1747189707526"/>
+<typeInfo handle="=sts01/C:\/Users\/user\/.m2\/repository\/org\/springframework\/spring-webmvc\/3.1.1.RELEASE\/spring-webmvc-3.1.1.RELEASE.jar&lt;org.springframework.web.servlet.mvc(Controller.class[Controller" modifiers="1537" timestamp="1747189707526"/>
 </typeInfoHistroy>

@@ -1,20 +1,6 @@
 INDEX VERSION 1.4+D:\MSAFullstackJava\webWorkspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-831767522.index
-3476086692.index
-206091656.index
-1213168454.index
-3537571450.index
-2789284458.index
-680063651.index
-3511036668.index
-2490857704.index
-259353301.index
-3593203429.index
-1327677279.index
-3210357547.index
-2704072307.index
-3656910577.index
-2751715369.index
-226371922.index
-941985737.index
-3090673458.index
+3515315585.index
+534184618.index
+1217274939.index
+954519732.index
+2793424151.index

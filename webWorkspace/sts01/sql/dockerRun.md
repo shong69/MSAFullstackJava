@@ -35,8 +35,42 @@ docker run -it -d --name step01 -p 8080:8080 --network net01 -v D:\MSAFullstackJ
 
 ### distroy 2
 ```
-docker run -it -d --name step01 -p 8080:8080 --network net02 -v D:\MSAFullstackJava\webWorkspace\sts01:/sts01 tomcat:9.0
+docker run -it -d --name step02 -p 8080:8080 --network net01 -v D:\MSAFullstackJava\webWorkspace\sts01:/sts01 tomcat:9.0
+docker exec -it step02 bash
+	
+wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+tar -zvxf apache-maven-3.9.9-bin.tar.gz
+mv apache-maven-3.9.9 ~/maven
+echo export PATH=$PATH:~/maven/bin >> ~/.profile
+source ~/.profile
+mvn -v
+apt install git -y
+git -v
+git clone https://gitlab.com/bit05class/kibwa2025.git
+cd  소스코드 위치
+mvn clean package
+mv ~~~~/target/~~.war /usr/local/tomcat/webapps/ROOT.war
 ```
 
+### distroy
+```
+docker run -it -p 8080:8080 --name step3 ubuntu:22.04 bash
+# jdk install
+apt search jdk
+apt install openjdk-8-jdk-headless -y
+echo export JAVA_HOME= >> ~/.profile
 
+# maven install
+apt install wget -y
+wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+tar -zvxf apache-maven-3.9.9-bin.tar.gz
+mv apache-maven-3.9.9 ~/maven
+echo export PATH=$PATH:~/maven/bin >> ~/.profile
+source ~/.profile
+#tomcat install
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.105/bin/apache-tomcat-9.0.105.tar.gz
+tar -zvxf apache-tomcat-9.0.105.tar.gz
+mv apache-tomcat-9.0.105 tomcat9
+sh tomcat9/bin/startup.sh
+```
 

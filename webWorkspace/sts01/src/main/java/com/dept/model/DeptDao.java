@@ -23,7 +23,7 @@ public class DeptDao extends JdbcDaoSupport{
 	};
 	public DeptDao() {
 		MysqlDataSource dataSource = new MysqlDataSource();
-		dataSource.setUrl("jdbc:mysql://localhost:33306/xe");
+		dataSource.setUrl("jdbc:mysql://ad19efbe0812:3306/xe");
 		dataSource.setUser("scott");
 		dataSource.setPassword("tiger");
 		setDataSource(dataSource);

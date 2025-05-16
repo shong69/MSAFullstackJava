@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+	  	<!-- end content -->
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="col-md-12">
+	  <address class="text-center">
+		  <strong>한국여성기업인협회Inc. All Rights reserved.</strong><br>
+		  <abbr title="Phone">P:</abbr> (123) 456-7890
+		</address>
+
+	  </div>
+	</div>
+</div></html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head th:replace="~{layout/frame :: headFrag}" >
+	</head>	
+	<body>
+		<nav th:replace="~{layout/frame :: navFrag}"></nav>
+		<div class="container">
+			<div class="row">
+				<h2 class="page-header">list page</h2>
+			</div>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>deptno</th>
+						<th>dname</th>
+						<th>loc</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each = "bean:${list}" th:object="${bean}">
+						<td><a th:text="*{deptno}" th:href="@{/dept/{deptno}(deptno=${bean.deptno})}" href="detp.html">1</a></td>
+						<td><a th:text="*{dname}" th:href="@{/dept/{deptno}(deptno=${bean.deptno})}" href="detp.html">user1</a></td>
+						<td><a th:text="*{loc}" th:href="@{/dept/{deptno}(deptno=${bean.deptno})}" href="detp.html">loc1</a></td>
+					</tr>
+					<tr th:each = "bean:${null}">
+						<td><a href="detp.html">2</a><td>
+						<td><a href="detp.html">user2</a><td>
+						<td><a href="detp.html">loc2</a><td>
+					</tr>
+					<tr th:each = "bean:${null}">
+						<td><a href="detp.html">3</a><td>
+						<td><a href="detp.html">user3</a><td>
+						<td><a href="detp.html">loc3</a><td>
+					</tr>
+					<tr th:each = "bean:${null}">
+						<td><a href="detp.html">4</a><td>
+						<td><a href="detp.html">user4</a><td>
+						<td><a href="detp.html">loc4</a><td>
+					</tr>
+				</tbody>
+			</table>
+			<p><a href="add.html" th:href="@{add}" class="btn btn-primary btn-block" role="button">입력</a></p>
+			<div class="row" th:replace="~{layout/frame :: footerFrag}"></div>
+		</div>
+	</body>
+</html>

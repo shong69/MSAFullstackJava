@@ -1,0 +1,8 @@
+# Node.js 기본 무시 항목
+node_modules/
+dist/
+.env
+
+# package.json과 package-lock.json 무시 (비권장)
+package.json
+package-lock.json

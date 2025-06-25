@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: aservice
+
+resilience4j:
+  circuitbreaker:
+    circuit-breaker-aspect-order: 1 #순서 지정
+    instances:
+      dept:
+        baseConfig: default
+          
+
+    configs:
+       default:
+         registerHealthIndicator: true
+         slidingWindowSize: 10
+         failureRateThreshold: 10
+         sliding-window-type: time-based
+         slow-call-duration-threshold: 3s
+         slow-call-rate-threshold: 100
+         waitDurationInOpenState: 5s
+
+  retry:
+    instances:
+      dept:
+        baseConfig: default
+    configs: 
+      defatul:
+        max-attempts: 3
+        wait-duration: 500ms
+        retry-exceptions:
+#        ignore-exceptions: #무시하고 싶은 예외
+          
